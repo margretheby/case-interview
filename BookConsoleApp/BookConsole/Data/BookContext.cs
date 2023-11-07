@@ -12,7 +12,7 @@ namespace BookConsole.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Configures the context to use SQL Server as the database provider
-            optionsBuilder.UseSqlServer("YourConnectionStringHere");
+            optionsBuilder.UseSqlServer("ConnectionString");
         }
     }
 }

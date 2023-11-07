@@ -9,8 +9,8 @@ namespace BookConsole
         // The main method for retrieving and displaying book information
         public static async Task GetAndDisplayAsync()
         {
-            // defining the API URL
-            string apiUrl = "https://www.googleapis.com/books/v1/volumes?q=true&maxResults=3";
+            // defining the API URL with search queries and maxResults parameter
+            string apiUrl = "https://www.googleapis.com/books/v1/volumes?q=the&maxResults=15";
 
             using (HttpClient client = new HttpClient())
             {
@@ -32,7 +32,7 @@ namespace BookConsole
                         if (apiResponse != null && apiResponse.Items != null)
                         {
                             Console.WriteLine("Items:");
-                            Console.WriteLine("");
+                            Console.WriteLine();
 
 
                             // Looping through the list of items
@@ -42,8 +42,7 @@ namespace BookConsole
                                 {
 
                                     // Displaying information about each book
-                                    Console.WriteLine($"Title: {item.volumeInfo.title ?? "N/A"}");
-                                    
+                                    Console.WriteLine($"Title: {item.volumeInfo.title}");
 
                                     // Displaying a value if the property does not exists
                                     if (item.volumeInfo.authors == null)
@@ -64,7 +63,7 @@ namespace BookConsole
                                         Console.WriteLine($"Pages: {item.volumeInfo.pageCount}");
                                     }
                                     
-                                    Console.WriteLine($"Published Date: {item.volumeInfo.publishedDate ?? "N/A"}");
+                                    Console.WriteLine($"Published Date: {item.volumeInfo.publishedDate}");
                                     Console.WriteLine($"ISBN: {item.volumeInfo.industryIdentifiers?[0]?.identifier ?? "N/A"}");
                                     Console.WriteLine(); // Adding spacing for readability
                                 }

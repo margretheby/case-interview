@@ -4,7 +4,7 @@ namespace BookConsole
     // Class to represent the API response
     public class ApiResponse
     {
-        // property to hold a list of objects from GoogleBooksItem
+        // property to contain a list of objects (book items) from GoogleBooksItem
         public List<GoogleBooksItem> Items { get; set; }
     }
 }

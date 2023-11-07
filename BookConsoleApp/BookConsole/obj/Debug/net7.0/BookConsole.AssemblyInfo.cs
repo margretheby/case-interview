@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f3f93ee43dcbdedc2c3724f213bb3d8dab4ed2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
